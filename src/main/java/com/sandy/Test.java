@@ -11,6 +11,9 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.sl.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class Test {
 
@@ -23,17 +26,17 @@ public class Test {
 
 	public static void readFromExcel(String file) throws FileNotFoundException, IOException {
 
-		HSSFWorkbook myexcelbook = new HSSFWorkbook(new FileInputStream(file));
+		XSSFWorkbook myexcelbook = new XSSFWorkbook(new FileInputStream(file));
 
-		HSSFSheet myexcelSheet = myexcelbook.getSheet("TestCases");
+		XSSFSheet myexcelSheet = myexcelbook.getSheet("TestCases");
 
 		
-		  HSSFRow row = myexcelSheet.getRow(0);
+		  XSSFRow row = myexcelSheet.getRow(0);
 		  
 		  String testname = row.getCell(0).getStringCellValue();
 		  System.out.println(testname);
 		  
-		  HSSFRow row1 = myexcelSheet.getRow(1);
+		  XSSFRow row1 = myexcelSheet.getRow(1);
 		  
 		  String testname1 = row1.getCell(0).getStringCellValue();
 		  System.out.println(testname1);
@@ -49,8 +52,8 @@ public class Test {
 
 	public static void writeToExcel(String file) {
 
-		HSSFWorkbook book = new HSSFWorkbook();
-		HSSFSheet sheet = book.createSheet("TestCases");
+		XSSFWorkbook book = new XSSFWorkbook();
+		XSSFSheet sheet = book.createSheet("TestCases");
 
 		// first row
 		Row row = sheet.createRow(0);
