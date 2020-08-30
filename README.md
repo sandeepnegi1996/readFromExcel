@@ -6,5 +6,5 @@
 
 #### Resources 
 
-1. https://howtodoinjava.com/java/library/readingwriting-excel-files-in-java-poi-tutorial/  :boom
-2. https://javarevisited.blogspot.com/2015/06/how-to-read-write-excel-file-java-poi-example.html  :awesome:
+1. https://howtodoinjava.com/java/library/readingwriting-excel-files-in-java-poi-tutorial/  :boom:
+2. https://javarevisited.blogspot.com/2015/06/how-to-read-write-excel-file-java-poi-example.html  :computer:
